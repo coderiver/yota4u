@@ -1,0 +1,29 @@
+doctype3
+html
+	include _doc.jade
+	title main
+	body
+		.out
+			include _header.jade
+			main.main
+				section.main__slider
+					.slider__in
+						.l-center
+							.slide
+								.slide__img.onleft
+									img(src="img/slide1.png" alt="slide").slide__img
+								.slide__txt.onright
+									h2.slide__ttl
+										| <span>Yota</span>Phone 2
+									p.
+										Первый в мире телефон с двух сторон понравится тем, кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих.
+									.slide__price
+										p Цена
+										.onleft
+											p.txt-large
+												| 39 990 <span class="price__currency">Р</span>
+										.onright
+												button(type="button").button.onleft <span>Купить</span>
+									.slide__location
+										a(href="#") Магазины
+										a(href="#") Сервисные центры

@@ -1,216 +1,146 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//header
+.header
+	background: #081319
+	border-bottom: 2px solid #ffffff
+	+clr
+
+.header__in
+	min-height: 64px
+	padding: 15px 50px
+	+box
+	.header__logo
+		margin-top: 3px
+	.header__nav
+		+clr
+	.button
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 0
+			height: 100%
+			border-radius: 10px
+			z-index: 0
+			+transition(all 0.3s ease)
+		&:hover
+			&:before
+				width: 100%
+				background: #00aeef
+
+.nav
+	margin-top: 6px
+	font-size: 0
+	+clr
+	li
+		display: inline-block
+		vertical-align: middle
+	.nav__link
+		position: relative
+		margin: 0 15px
+		font-size: 14px
+		text-decoration: none
+		text-transform: uppercase
+		color: #ffffff
+		span
+			+opsb
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 0
+			height: 1px
+			background: #ffffff
+			+transition(all 0.2s ease)
+		&:hover
+			&:after
+				width: 100%
+
+
+//main
+.main__slider
+	background: #051014
+
+.slider__in
+	padding: 100px 50px 95px
+	background: url(../img/slide_bg.jpg) center center
+	+cover
+	+box
+
+.slide
+	+clr
+	.slide__img
+		width: 40%
+		img
+			width: 100%
+			max-width: 407px
+			margin-left: 16%
+	.slide__txt
+		width: 60%
+		padding: 40px 0 0 8%
+		font-size: 16px
+		color: #FFF
+		+box
+		p
+			line-height: 1.7
+	.slide__ttl
+		margin-bottom: 50px
+		text-transform: uppercase
+		font-size: 50px
+		span
+			+opsb
+	.slide__price
+		max-width: 480px
+		margin: 85px 0 15px
+		+clr
+		.txt-large
+			font-size: 48px
+		.price__currency
+			position: relative
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				height: 0.06em
+				background: #ffffff
+			&:before
+				top: 63%
+				width: 93%
+			&:after
+				top: 52%
+				width: 40%
+	.button
+		margin-top: 15px
+		padding: 13px 40px
+		text-transform: none
+		font-size: 16px
+		background: #00aeef
+		border: none
+		border-radius: 20px
+		&:active
+			top: 1px
+	.slide__location
+		font-size: 0
+		a
+			position: relative
+			display: inline-block
+			margin-right: 35px
+			padding-left: 25px
+			font-size: 16px
+			text-decoration: underline
+			color: #ffffff
+			&:before
+				content: ""
+				position: absolute
+				display: inline-block
+				top: -4px
+				left: 0
+				+transition(all 0.2s ease)
+				+s(location)
+			&:hover
+				&:before
+					top: -10px
 
 

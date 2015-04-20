@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -47,120 +47,43 @@
 // p
 // 	+jpg(bla)
 
+//fonts
++font(opensans, opensans)
++font(opensans-bold, opensans-bold)
+
+=ops
+	font-family: "opensans", Arial, sans-serif
+=opsb
+	font-family: "opensans-bold", Arial, sans-serif
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-size: 12px
 	line-height: 1.4
-
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	+ops
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	+font-smoothing
+
+// common blocks
+.out
+	min-width: 320px
+
+.onleft
+	float: left
+.onright
+	float: right
+
+.button
+	position: relative
+	margin-left: 15px
+	padding: 5px 20px
+	text-transform: uppercase
+	color: #ffffff
+	background: none
+	border: 1px solid #ffffff
+	border-radius: 10px
+	+ops
+	span
+		position: relative
+		z-index: 1

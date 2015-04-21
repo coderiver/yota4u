@@ -6,24 +6,204 @@ html
 		.out
 			include _header.jade
 			main.main
-				section.main__slider
+				section.slider
 					.slider__in
 						.l-center
-							.slide
-								.slide__img.onleft
-									img(src="img/slide1.png" alt="slide").slide__img
-								.slide__txt.onright
-									h2.slide__ttl
-										| <span>Yota</span>Phone 2
-									p.
-										Первый в мире телефон с двух сторон понравится тем, кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих.
-									.slide__price
-										p Цена
-										.onleft
-											p.txt-large
-												| 39 990 <span class="price__currency">Р</span>
-										.onright
-												button(type="button").button.onleft <span>Купить</span>
-									.slide__location
-										a(href="#") Магазины
-										a(href="#") Сервисные центры
+							.cycle-wrap
+								.cycle-slideshow(data-cycle-timeout="0", data-cycle-slides=">.slide", data-cycle-prev=".cycle-prev", data-cycle-next=".cycle-next", data-cycle-pager=".cycle-pager", data-cycle-swipe=true, data-cycle-swipe-fx="scrollHorz")
+									.slide
+										.slide__img.onleft
+											img(src="img/slide1.png" alt="slide").slide__img
+										.slide__txt.onright
+											h2.slide__ttl
+												| <span class="txt-bold">Yota</span>Phone 2
+											p.
+												Первый в мире телефон с двух сторон понравится тем, кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих.
+											.slide__price
+												p Цена
+												.onleft
+													p.txt-large
+														| 39 990 <span class="price__currency">Р</span>
+												.onright
+														button(type="button").button.onleft <span>Купить</span>
+											.slide__location
+												a(href="#") Магазины
+												a(href="#") Сервисные центры
+									.slide
+										.slide__img.onleft
+											img(src="img/slide1.png" alt="slide").slide__img
+										.slide__txt.onright
+											h2.slide__ttl
+												| <span class="txt-bold">Yota</span>Phone 2
+											p.
+												Первый в мире телефон с двух сторон понравится тем, кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих.
+											.slide__price
+												p Цена
+												.onleft
+													p.txt-large
+														| 39 990 <span class="price__currency">Р</span>
+												.onright
+														button(type="button").button.onleft <span>Купить</span>
+											.slide__location
+												a(href="#") Магазины
+												a(href="#") Сервисные центры
+								.cycle-prev
+								.cycle-next
+								.cycle-pager
+				section.quotes
+					.l-center
+						.quotes-wrap
+							.quotes__in.onleft
+								h2
+									| <span class="txt-bold">Yota</span>Phone 2
+								h3.txt-light
+									| Телефон с двух сторон
+							.quotes__in.onleft
+								blockquote.blockquote.txt-light
+									| Первый в мире телефон с двух сторон. Понравится тем кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих экранах
+						.quotes-wrap
+							.quotes__in.onleft
+								.quotes__bl
+									h4.quotes__ttl.txt-semibold
+										| Покажет самое важное
+									blockquote.blockquote
+										| Любые уведомления на втором экране доступны с одного взгляда
+								.quotes__bl
+									h4.quotes__ttl.txt-semibold
+										| Работает по дням, а не по часам
+									blockquote.blockquote
+										| Режим YotaEnergy экономит батарею, сохраняя основные функции телефона
+							.quotes__in.onleft
+								.quotes__bl
+									h4.quotes__ttl.txt-semibold
+										| Придает вкус чтению
+									blockquote.blockquote
+										| 100 часов комфортного чтения на втором экране без вреда для глаз
+								.quotes__bl
+									h4.quotes__ttl.txt-semibold
+										| Носит личный характер
+									blockquote.blockquote
+										| Установите любое изображение или слайд-шоу на второй экран. Делитесь настроением с окружающими!
+				section.video
+					.l-center
+						.video-wrap
+							//iframe(src="https://player.vimeo.com/video/113385304?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+				section.description
+					.l-inner
+						.description__img.onright
+							img(src="img/section1.png" alt="yotaphone")
+						.description__txt.onleft
+							h2.description__ttl.txt-light Покажет самое важное
+							a(href="#").description__link.txt-light
+								| <i class="video_ico"></i><span>Смотреть видео</span>
+							p.
+								Собрав на YotaPanel виджеты для звонков,
+								уведомлений, новостей курсов валют, погоды,
+								календаря и много другого, вы будете в курсе событий с одного взгляда без разблокировки телефона.
+							.description__char
+								.description__bl
+									p E-ink дисплей
+									p.description__details 4.7&#8221;
+								.description__bl
+									p Скорость обновления
+									p.description__details 120 мс
+				section.description.with-bg
+					.l-inner
+						.description__img.onleft
+							img(src="img/section2.png" alt="yotaphone")
+						.description__txt.onleft
+							h2.description__ttl.txt-light Работает по дням,<br> а не по часам
+							a(href="#").description__link.txt-light
+								| <i class="video_ico"></i><span>Смотреть видео</span>
+							p.
+								Два дня работы в режиме YotaEnergy, который экономит батарейку и сохраняет основные функции телефона.
+								Если батарея всё-таки садится, сохраните карту или авиабилет в YotaSnap, и информация останется на втором экране даже после полного разряда батереи.
+							.description__char
+								.description__bl
+									p Аккумулятор
+									p.description__details 2500 мАч
+								.description__bl
+									p Режим YotaEnergy
+									p.description__details 48+ ч.
+				section.description.is-bright
+					.l-inner
+						.description__img.onright
+							img(src="img/section3.png" alt="yotaphone")
+						.description__txt.onleft
+							h2.description__ttl.txt-light Придаст вкус чтению
+							a(href="#").description__link.txt-light
+								| <i class="video_ico"></i><span>Смотреть видео</span>
+							p.
+								100 часов на чтение книг, соцсетей, новостей, RSS-фидов и другого текста.
+								Всегда включённый экран бережёт глаза, не бликует на солнце и поддерживает распространенные форматы документов.
+							.description__char
+								.description__bl
+									p Чтение
+									p.description__details 100+ ч.
+								.description__bl
+									p Карты
+									p.description__details 18+ ч.
+				section.description.with-bg.is-dark
+					.l-inner
+						.description__img.onleft
+							img(src="img/section4.png" alt="yotaphone").pad-5
+						.description__txt.onleft
+							h2.description__ttl.txt-light Носит личный<br> характер
+							a(href="#").description__link.txt-light
+								| <i class="video_ico"></i><span>Смотреть видео</span>
+							p.
+								Не просто фоновая картинка, обложка!
+								Поставьте любое изображение или настройте слайдшоу из Инстаграма. Творите и делитесь своим настроением с окружающими!
+							.description__char
+								.description__bl
+									p Градации серого
+									p.description__details 16
+								.description__bl
+									p Самовыражение
+									p.description__details ∞
+				section.service
+					.l-inner
+						h2.service__ttl.txt-light Забота о каждом покупателе
+						.service__in
+							.service__bl
+								.service__img
+									i.clock_ico
+								.service__txt
+									h3.service__name.txt-semibold Сервис 24/7
+									p
+										| Круглосуточная горячая линия. Ответим в любое время суток, разберемся в каждой ситуации.
+							.service__bl
+								.service__img
+									i.delivery_ico
+								.service__txt
+									h3.service__name.txt-semibold Быстрая доставка
+									p
+										| На следующий день в Москве, через день в Санкт-Петербурге, от трех дней в регионах.
+							.service__bl
+								.service__img
+									i.calendar_ico
+								.service__txt
+									h3.service__name.txt-semibold Гарантия 12 месяцев
+									p
+										| Мы следим за каждым аппаратом и всегда решаем вопросы в пользу клиента.
+							.service__bl
+								.service__img
+									i.sale_ico
+								.service__txt
+									h3.service__name.txt-semibold Скидка 20%
+									p
+										| Скидка 20% владельцам YotaPhone первого поколения. Сообщите номер IMEI при заказе.
+						a(href="#").service__link.js-click
+							| Технические характеристики <i class="arr_ico"></i>
+				section.buy
+					.buy__img
+						img(src="img/slide_bg4.jpg" alt="slide")
+						.buy__price
+							p Цена
+							p.txt-large 39900 руб.
+					.buy__buttons
+						button(type="button").button Купить на сайте
+						button(type="button").button Магазины
+
+
+		script(src="js/lib/head.js" data-headjs-load="js/init.js")

@@ -50,11 +50,21 @@
 //fonts
 +font(opensans, opensans)
 +font(opensans-bold, opensans-bold)
++font(opensans-semibold, opensans-semibold)
++font(opensans-light, opensans-light)
++font(thesansyota-w3light, thesansyota-w3light)
+
 
 =ops
 	font-family: "opensans", Arial, sans-serif
 =opsb
 	font-family: "opensans-bold", Arial, sans-serif
+=opsemi
+	font-family: "opensans-semibold", Arial, sans-serif
+=opsl
+	font-family: "opensans-light", Arial, sans-serif
+=yotasans
+	font-family: "thesansyota-w3light", Arial, sans-serif
 
 body
 	font-size: 12px
@@ -73,6 +83,13 @@ h1, h2, h3, h4, h5, h6
 	float: left
 .onright
 	float: right
+
+.txt-bold
+	+opsb
+.txt-semibold
+	+opsemi
+.txt-light
+	+opsl
 
 .button
 	position: relative

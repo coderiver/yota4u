@@ -17,27 +17,38 @@ html
 							a(href="#") Для Yota
 						li.breadcrumb__point
 							span Гарнитура Bluetooth Jawbone ICON+ Nerd, цвет голубой
-
 					.content
 						.content__in.onleft
 							.item
-								.item__desc.onleft
-									h2.item__ttl Гарнитура Bluetooth Jawbone ICON+ Nerd, цвет голубой
-									.item__article
-										span Артикул: 99MO023005
-										button(type="button").button Купить
-									.item__txt
-										p.
-											Гарнитура Jawbone ICON HD в комплекте с USB Bluetooth переходником Nerd.
-											USB адаптер позволяет легко связать ICON HD с ПК или Mac и использовать гарнитуру с приложениями VoIP(например общение через Skype).
-											К гарнитуре так же можно привязать одновременно 2 устройства,будь это два мобильных телефона или телефон и компьютер,при этом гарнитура запоминает до 8 устройств.
-										p.
-											Отличительная особенность гарнитуры помимо USB адаптера это качество звука в формате HD,так же ICON HD оснащен военной технологией NoiseAssassin® 2.5(которая является самой передовой на данный момент) для подавления постаронних шумов,в том числе и шума ветра.
-								.item__slider.onleft
-									img(src="img/inner_slide.jpg" alt="bluetooth")
-
-
-
+								.item-wrap
+									.item__slider.onright
+										.cycle-wrap
+											.cycle-slideshow(data-cycle-swipe=true, data-cycle-swipe-fx="scrollHorz", data-cycle-pager=".cycle-pager")
+												img(src="img/inner_slide.jpg" alt="bluetooth")
+												img(src="img/inner_slide.jpg" alt="bluetooth")
+												img(src="img/inner_slide.jpg" alt="bluetooth")
+											.cycle-pager
+									.item__desc.onleft
+										h2.item__ttl Гарнитура Bluetooth Jawbone ICON+ Nerd, цвет голубой
+										.item__article
+											span Артикул: 99MO023005
+											button(type="button").button Купить
+										.item__txt
+											p.
+												Гарнитура Jawbone ICON HD в комплекте с USB Bluetooth переходником Nerd.
+												USB адаптер позволяет легко связать ICON HD с ПК или Mac и использовать гарнитуру с приложениями VoIP(например общение через Skype).
+												К гарнитуре так же можно привязать одновременно 2 устройства,будь это два мобильных телефона или телефон и компьютер,при этом гарнитура запоминает до 8 устройств.
+											p.
+												Отличительная особенность гарнитуры помимо USB адаптера это качество звука в формате HD,так же ICON HD оснащен военной технологией NoiseAssassin® 2.5(которая является самой передовой на данный момент) для подавления постаронних шумов,в том числе и шума ветра.
+								.item__char
+									h4.txt-bold Характеристики
+									h4.txt-bold Питание и аккумулятор
+									ul.item__list
+										li До 4,5 часов в режиме разговора
+										li До 10 дней в режиме ожидания
+										li Встроенный литий-ионный полимерный аккумулятор
+										li Jawbone индикатор батареи автоматически отображаются на iPhone ® (BlackBerry ® и Android ™
+										li Micro USB интерфейсный разъем (зарядка и MyTALK)
 						.sidebar.onright
 							label.input
 								input(type="text" placeholder="Поиск по сайту")
@@ -68,3 +79,6 @@ html
 									a(href="#") Чехлы
 								li
 									a(href="#") Другое
+
+			include _footer.jade
+		script(src="js/lib/head.js" data-headjs-load="js/init.js")

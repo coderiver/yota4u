@@ -25,18 +25,46 @@
 //content
 .content
 	margin-top: 30px
+	padding-bottom: 60px
+	border-bottom: 1px solid #E5E6E7
 	+clr
 
 .content__in
 	width: calc(100% - 217px)
 	padding-right: 5%
 	+box
+	+r(630)
+		width: 100%
+		float: none
+		padding-right: 0
 
 .item
+	.item-wrap
+		+clr
 	.item__slider
-		margin-left: 50px
+		width: 50%
+		.cycle-wrap
+			max-width: 400px
+		.cycle-slideshow
+			img
+				display: none
+				width: 100%
+				min-width: 280px
+				&:first-child
+					display: block
+		.cycle-pager
+			text-align: center
+			span
+				font-size: 50px
+				color: #dddddd
+				cursor: pointer
+			.cycle-pager-active
+				color: #101C23
 	.item__desc
-		width: 40%
+		width: 50%
+		padding-right: 5%
+		max-width: 430px
+		+box
 	.item__ttl
 		color: #535353
 		font-size: 24px
@@ -67,9 +95,88 @@
 				&:active
 					position: relative
 					top: 1px
+	.item__char
+		font-size: 14px
+		color: #5A5A5A
+		line-height: 1.6
+	.item__list
+		margin-top: 10px
+		list-style-type: disc
+		padding-left: 38px
+		li
+			line-height: 2.2
 
+	+r(1020)
+		.item__slider
+			float: none
+			width: auto
+		.item__desc
+			float: none
+			width: 100%
+			max-width: inherit
+		.item__slider
+			max-width: 400px
+			margin: 0 auto
 
-
+//products
+.products
+	font-size: 0
+	.product__bl
+		display: inline-block
+		width: 25%
+		margin-bottom: 60px
+		padding-right: 5%
+		text-align: center
+		font-size: 14px
+		color: #8C8B8B
+		vertical-align: top
+		+box
+	.product__img
+		height: 130px
+		margin-bottom: 10px
+		+vertical
+		img
+			max-width: 100%
+			display: inline-block
+			vertical-align: middle
+	.product__info
+		display: inline-block
+		text-align: left
+	.product__ttl
+		display: block
+		height: 45px
+		margin-bottom: 10px
+		font-size: 16px
+		color: #5A5A5A
+		overflow: hidden
+		text-decoration: none
+	.product__price
+		font-size: 18px
+		color: #5A5A5A
+	.button
+		margin: 15px 0 0
+		padding: 5px 15px
+		color: #5A5A5A
+		border-color: #b6b6b6
+		text-transform: none
+		border-radius: 8px
+		&:hover
+			color: darken(#8C8B8B, 10%)
+			border-color: darken(#B6B6B6, 10%)
+			&:active
+				position: relative
+				top: 1px
+	+r(1020)
+		.product__bl
+			width: 50%
+		.product__info
+			text-align: center
+	+r(500)
+		text-align: center
+		.product__bl
+			width: 100%
+			max-width: 200px
+			padding-right: 0
 
 
 //sidebar
@@ -90,6 +197,7 @@
 			padding: 10px 20px 10px 35px
 			background: #F1F1F1
 			border-radius: 20px
+			+box
 	.sidebar__nav
 		margin-top: 30px
 		font-size: 14px
@@ -102,3 +210,13 @@
 			&.is-active
 				color: #454545
 				+opsemi
+			&:hover
+				text-decoration: underline
+	+r(630)
+		float: none
+		width: 100%
+		text-align: center
+		margin-top: 30px
+		.input
+			max-width: 350px
+			margin: 0 auto

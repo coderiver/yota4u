@@ -5,7 +5,7 @@
 	left: 0
 	right: 0
 	background: #081319
-	z-index: 3
+	z-index: 200
 	+clr
 
 .header__in
@@ -64,6 +64,7 @@
 		vertical-align: middle
 	.nav__link
 		position: relative
+		display: inline-block
 		margin: 0 15px
 		font-size: 14px
 		text-decoration: none
@@ -88,6 +89,7 @@
 	visibility: hidden
 	position: fixed
 	top: 0
+	bottom: 0
 	right: -300px
 	width: 300px
 	height: 100%
@@ -97,13 +99,14 @@
 	overflow-y: auto
 	background: #333E48
 	border-left: 1px solid #ffffff
-	z-index: 4
+	z-index: 300
 	+transition(right 0.3s ease)
 	+box-shadow(inset 2px 2px 1px 0px rgba(#000, 0.5), -5px 0 10px 0px rgba(0, 0, 0, 0.5))
 	+box
 	+clr
+	+translate3d
 	.nav
-		margin-top: 80px
+		padding-top: 80px
 	.nav li
 		display: block
 		margin-bottom: 20px
@@ -113,6 +116,7 @@
 	.close-button
 		display: block
 		margin-top: 25px
+		cursor: pointer
 		+s(close)
 	&.is-active
 		visibility: visible
@@ -125,15 +129,16 @@
 .main
 	padding-top: 64px
 	border-top: 2px solid #ffffff
+	+box
 
 .slider
-	background: #051014
-
-.swiper-container
 	padding: 100px 0 80px
 	background: url(../img/slide_bg.jpg) center center
+	background-color: #051014
 	+cover
 	+box
+
+.swiper-container
 	.swiper-button-prev
 		+s(prev)
 	.swiper-button-next
@@ -268,65 +273,65 @@
 			.slide__bl
 				float: none
 			.button
-				display: block
-				margin: 15px auto 0
+				display: inline-block
+				margin: 15px 0
 		.slide__location
 			padding-bottom: 30px
 		.slide__location a
 			display: block
 			margin: 0 0 15px
 
-
-.cycle-wrap
-	position: relative
-	min-height: 540px
-	padding: 0 25px
-	+box
-	.cycle-slideshow
-		z-index: 1
-		overflow: hidden //TODO AUTOHEIGHT
-		+clr
-	.slide,
-	.slide-quote
-		display: none
-		&:first-child
-			display: block
-	.cycle-prev,
-	.cycle-next
-		position: absolute
-		top: 50%
-		margin-top: -26px
-		cursor: pointer
-		z-index: 2
-	.cycle-prev
-		left: 0
-		+s(prev)
-		&.is-blue
-			+s(prev-blue)
-	.cycle-next
-		right: 0
-		+s(next)
-		&.is-blue
-			+s(next-blue)
-	.cycle-pager
-		position: absolute
-		left: 50%
-		bottom: -60px
-		font-size: 0
-		+transform(translateX(-50%)) //TODO another way of centering
-		span
-			display: inline-block
-			width: 7px
-			height: 7px
-			margin: 0 10px
-			border-radius: 50%
-			border: 1px solid #ffffff
-			vertical-align: middle
+.quotes
+	.cycle-wrap
+		position: relative
+		min-height: 540px
+		padding: 0 25px
+		+box
+		.cycle-slideshow
+			z-index: 1
+			overflow: hidden //TODO AUTOHEIGHT
+			+clr
+		.slide,
+		.slide-quote
+			display: none
+			&:first-child
+				display: block
+		.cycle-prev,
+		.cycle-next
+			position: absolute
+			top: 50%
+			margin-top: -26px
 			cursor: pointer
-		.cycle-pager-active
-			width: 10px
-			height: 10px
-			background: #ffffff
+			z-index: 2
+		.cycle-prev
+			left: 0
+			+s(prev)
+			&.is-blue
+				+s(prev-blue)
+		.cycle-next
+			right: 0
+			+s(next)
+			&.is-blue
+				+s(next-blue)
+		.cycle-pager
+			position: absolute
+			left: 50%
+			bottom: -60px
+			font-size: 0
+			+transform(translateX(-50%)) //TODO another way of centering
+			span
+				display: inline-block
+				width: 7px
+				height: 7px
+				margin: 0 10px
+				border-radius: 50%
+				border: 1px solid #ffffff
+				vertical-align: middle
+				cursor: pointer
+			.cycle-pager-active
+				width: 10px
+				height: 10px
+				background: #ffffff
 
 
 //quotes
@@ -682,6 +687,10 @@
 	.buy__buttons
 		text-align: center
 		font-size: 0
+		.button-wrap
+			display: inline-block
+			&:first-child
+				margin-right: 35px
 		.button
 			display: inline-block
 			padding: 13px 40px
@@ -693,8 +702,6 @@
 			border-radius: 20px
 			&:active
 				top: 1px
-			&:first-child
-				margin-right: 35px
 	.buy__price
 		position: absolute
 		top: 50%
@@ -717,11 +724,14 @@
 			text-align: center
 	+r(500)
 		.buy__buttons
-			.button
+			.button-wrap
 				display: block
-				margin: 0 auto 20px
 				&:first-child
-					margin-right: auto
+					margin-right: 0
+			.button
+				display: inline-block
+				margin: 0 auto 20px
+
 
 
 //footer
@@ -820,9 +830,10 @@
 				margin-right: 7px
 				&:after
 					display: none
-		.button
+		.nav
 			display: block
-			margin: 15px auto 0
+		.button
+			margin: 15px 0
 	+r(500)
 		.nav li
 			display: block

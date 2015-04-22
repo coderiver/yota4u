@@ -27,12 +27,17 @@ head.ready(function() {
 
 	//on resize
 	$(window).resize(function(){
+
 		sliderHeight();
+
 		if($(window).width() > 800){
 			$('.mobile-menu').removeClass('is-active');
 		}
-	})
+		$(".product__ttl").dotdotdot({
+			ellipsis: "..."
+		});
 
+	});
 
 	//mobile menu
 	$('.js-open').click(function(){
@@ -51,5 +56,11 @@ head.ready(function() {
 		$(this).find('.arr_ico').toggleClass('is-active');
 		$('.tech').slideToggle();
 	});
+
+	//text overflow in products
+	$(".product__ttl").dotdotdot({
+		ellipsis: "..."
+	});
+
 
 });

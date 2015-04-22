@@ -6,7 +6,7 @@
 
 .header__in
 	min-height: 64px
-	padding: 15px 50px
+	padding: 15px 0
 	+box
 	.header__logo
 		margin-top: 3px
@@ -145,11 +145,14 @@
 .cycle-wrap
 	position: relative
 	min-height: 540px
+	padding: 0 25px
+	+box
 	.cycle-slideshow
 		z-index: 1
 		overflow: hidden //TODO AUTOHEIGHT
 		+clr
-	.slide
+	.slide,
+	.slide-quote
 		display: none
 		&:first-child
 			display: block
@@ -237,7 +240,7 @@
 	.quotes__bl
 		width: 50%
 		display: inline-block
-		padding-right: 20px
+		padding-right: 30px
 		font-size: 20px
 		vertical-align: top
 		+box
@@ -253,15 +256,45 @@
 			top: 5px
 			left: -23px
 			+s(quote)
+	+r(1020)
+		margin-bottom: 40px
+		padding: 0 5%
+		.quotes__in
+			width: 100%
+			margin-bottom: 20px
+			&:first-child
+				padding-right: 0
+			h2
+				font-size: 40px
+			h3
+				font-size: 30px
+			&.main-quote
+				.blockquote
+					font-size: 30px
+	+r(630)
+		.quotes__in
+			h2
+				font-size: 35px
+			h3
+				font-size: 25px
+		.quotes__bl
+			width: 100%
+			padding-right: 0
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
 
 .slide-quote
 	.quotes__bl
 		padding-right: 30px
+	+r(630)
+		.blockquote
+			padding-right: 0
 
 
 //video
 .video
-	background: #000 //TODO remove
+	background: #000000
 
 .video-wrap
 	width: 100%
@@ -274,6 +307,8 @@
 		left: 0
 		width: 100%
 		height: 100%
+	+r(500)
+		padding: 50% 0
 
 //description
 .description
@@ -377,7 +412,49 @@
 		.description__img
 			img
 				+box
-
+	+r(1020)
+		padding: 50px 0
+		&.with-bg
+			.description__img,
+			.description__txt
+				width: 100%
+				text-align: center
+			.description__img
+				img
+					max-width: 50%
+					&.pad-5
+						max-width: 70%
+		.description__img
+			width: 100%
+			float: none
+			text-align: center
+			img
+				display: inline-block
+				max-width: 80%
+				padding-left: 0
+				&.pad-5
+					padding-left: 0
+		.description__txt
+			float: none
+			width: 100%
+			max-width: 80%
+			margin: 20px auto 0
+			text-align: center
+	+r(630)
+		.description__ttl
+			font-size: 38px
+		.description__bl
+			display: block
+			&:first-child
+				padding-right: 0
+		.description__img
+			img
+				max-width: 100%
+		.description__txt
+			max-width: inherit
+	+r(500)
+		.description__ttl
+			font-size: 32px
 
 //service
 .service
@@ -434,6 +511,33 @@
 		+s(arr-down)
 		&.is-active
 			+s(arr-up)
+	+r(1020)
+		.service__ttl
+			text-align: center
+		.service__in
+			text-align: center
+		.service__bl
+			width: 50%
+			max-width: 350px
+			margin-bottom: 20px
+			padding: 0 20px
+			text-align: left
+	+r(630)
+		.service__ttl
+			font-size: 38px
+	+r(500)
+		.service__ttl
+			font-size: 35px
+		.service__bl
+			width: 100%
+			text-align: center
+		.service__img
+			text-align: center
+		.service__link
+			font-size: 20px
+		.arr_ico
+			display: block
+			margin: 10px auto 0
 
 //buy
 .buy
@@ -453,6 +557,7 @@
 		.button
 			display: inline-block
 			padding: 13px 40px
+			margin-left: 0
 			text-transform: none
 			font-size: 16px
 			background: #00aeef
@@ -471,6 +576,25 @@
 		color: #FFF
 		.txt-large
 			font-size: 38px
+	+r(1020)
+		.buy__price
+			right: 1%
+			.txt-large
+				font-size: 30px
+	+r(630)
+		.buy__price
+			position: static
+			display: inline-block
+			margin: 20px 0 30px
+			text-align: center
+	+r(500)
+		.buy__buttons
+			.button
+				display: block
+				margin: 0 auto 20px
+				&:first-child
+					margin-right: auto
+
 
 //footer
 .footer
@@ -478,7 +602,7 @@
 	color: #797979
 	+clr
 	.footer__in
-		margin: 0 auto
+		margin: 0 auto 10px
 		text-align: center
 	.footer__social,
 	.footer__contacts
@@ -554,3 +678,27 @@
 	.call_ico
 		margin-right: 10px
 		+s(call)
+	+r(1020)
+		.footer__in
+			margin-bottom: 20px
+	+r(630)
+		.footer__social,
+		.footer__contacts
+			display: block
+			margin-bottom: 20px
+		.footer__ico
+			margin: 0 7px
+			&:last-child
+				margin-right: 7px
+				&:after
+					display: none
+		.button
+			display: block
+			margin: 15px auto 0
+	+r(500)
+		.nav li
+			display: block
+			margin-bottom: 10px
+		.footer__copyright
+			float: none
+			text-align: center

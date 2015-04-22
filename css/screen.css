@@ -66,30 +66,43 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; -webkit-font-smoothing: antialiase
 .nav .nav__link:after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: white; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
 .nav .nav__link:hover:after { width: 100%; }
 
-.slider { background: #051014; overflow: hidden; }
+.slider { background: #051014; }
 
-.slider__in { padding: 100px 50px; background: url(../img/slide_bg.jpg) center center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.swiper-container { padding: 100px 0 80px; background: url(../img/slide_bg.jpg) center center; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.swiper-container .swiper-button-prev { background: url('../img/icons-sa1171f892a.png') 0 -1126px no-repeat; width: 26px; height: 52px; }
+.swiper-container .swiper-button-next { background: url('../img/icons-sa1171f892a.png') 0 -902px no-repeat; width: 26px; height: 52px; }
+.swiper-container .swiper-pagination { bottom: 20px; }
+.swiper-container .swiper-pagination-bullet { width: 5px; height: 5px; background: none; border: 1px solid white; vertical-align: middle; }
+.swiper-container .swiper-pagination-bullet-active { width: 10px; height: 10px; background: white; }
+@media only screen and (max-width: 1020px) { .swiper-container { max-height: inherit; } }
 
-.slide { max-width: 1260px; margin: 0 auto; *zoom: 1; }
-.slide:after { content: " "; display: table; clear: both; }
-.slide .slide__img { width: 40%; }
-.slide .slide__img img { width: 100%; max-width: 407px; margin-left: 16%; }
-.slide .slide__txt { width: 60%; padding: 40px 0 0 8%; font-size: 16px; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.slide .slide__txt p { line-height: 1.7; }
-.slide .slide__ttl { margin-bottom: 50px; text-transform: uppercase; font-size: 50px; }
-.slide .slide__price { max-width: 480px; margin: 85px 0 15px; *zoom: 1; }
-.slide .slide__price:after { content: " "; display: table; clear: both; }
-.slide .slide__price .txt-large { font-size: 48px; }
-.slide .slide__price .price__currency { position: relative; }
-.slide .slide__price .price__currency:before, .slide .slide__price .price__currency:after { content: ""; position: absolute; left: 0; height: 0.06em; background: white; }
-.slide .slide__price .price__currency:before { top: 63%; width: 90%; }
-.slide .slide__price .price__currency:after { top: 52%; width: 40%; }
-.slide .button { margin-top: 15px; padding: 13px 40px; text-transform: none; font-size: 16px; background: #00aeef; border: none; border-radius: 20px; }
-.slide .button:active { top: 1px; }
-.slide .slide__location { font-size: 0; }
-.slide .slide__location a { position: relative; display: inline-block; margin-right: 35px; padding-left: 25px; font-size: 16px; text-decoration: underline; color: white; }
-.slide .slide__location a:before { content: ""; position: absolute; display: inline-block; top: -4px; left: 0; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; background: url('../img/icons-sa1171f892a.png') 0 -747px no-repeat; width: 18px; height: 25px; }
-.slide .slide__location a:hover:before { top: -10px; }
+.swiper-wrapper { max-width: 1260px; margin: 0 auto; }
+
+.swiper-slide { font-size: 0; }
+.swiper-slide .slide__in { max-width: 1260px; }
+.swiper-slide .slide__img { display: inline-block; width: 40%; vertical-align: top; }
+.swiper-slide .slide__img img { width: 100%; max-width: 415px; margin-left: 16%; }
+.swiper-slide .slide__txt { display: inline-block; width: 60%; padding: 40px 5% 0 10%; font-size: 16px; color: white; vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.swiper-slide .slide__txt p { line-height: 1.7; }
+.swiper-slide .slide__ttl { margin-bottom: 50px; text-transform: uppercase; font-size: 50px; }
+.swiper-slide .slide__price { max-width: 480px; margin: 85px 0 15px; *zoom: 1; }
+.swiper-slide .slide__price:after { content: " "; display: table; clear: both; }
+.swiper-slide .slide__price .txt-large { font-size: 48px; }
+.swiper-slide .slide__price .price__currency { position: relative; }
+.swiper-slide .slide__price .price__currency:before, .swiper-slide .slide__price .price__currency:after { content: ""; position: absolute; left: 0; height: 0.06em; background: white; }
+.swiper-slide .slide__price .price__currency:before { top: 63%; width: 90%; }
+.swiper-slide .slide__price .price__currency:after { top: 52%; width: 40%; }
+.swiper-slide .button { margin-top: 15px; padding: 13px 40px; text-transform: none; font-size: 16px; background: #00aeef; border: none; border-radius: 20px; }
+.swiper-slide .button:active { top: 1px; }
+.swiper-slide .slide__location { font-size: 0; }
+.swiper-slide .slide__location a { position: relative; display: inline-block; margin-right: 35px; padding-left: 25px; font-size: 16px; text-decoration: underline; color: white; }
+.swiper-slide .slide__location a:before { content: ""; position: absolute; display: inline-block; top: -4px; left: 0; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; background: url('../img/icons-sa1171f892a.png') 0 -747px no-repeat; width: 18px; height: 25px; }
+.swiper-slide .slide__location a:hover:before { top: -10px; }
+@media only screen and (max-width: 1020px) { .swiper-slide .slide__txt, .swiper-slide .slide__img { display: block; width: 100%; }
+  .swiper-slide .slide__img img { margin: 0 auto; }
+  .swiper-slide .slide__price { margin: 55px auto 15px; }
+  .swiper-slide .slide__location { text-align: center; }
+  .swiper-slide .slide__ttl { font-size: 42px; text-align: center; } }
 
 .cycle-wrap { position: relative; min-height: 540px; padding: 0 25px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .cycle-wrap .cycle-slideshow { z-index: 1; overflow: hidden; *zoom: 1; }

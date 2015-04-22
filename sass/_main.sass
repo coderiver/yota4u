@@ -472,3 +472,85 @@
 		.txt-large
 			font-size: 38px
 
+//footer
+.footer
+	padding: 50px 0 23px
+	color: #797979
+	+clr
+	.footer__in
+		margin: 0 auto
+		text-align: center
+	.footer__social,
+	.footer__contacts
+		display: inline-block
+		font-size: 0
+		vertical-align: middle
+	.footer__social
+		.footer__ico
+			&:last-child
+				margin-right: 15px
+				&:after
+					content: ""
+					position: absolute
+					top: 0
+					right: -15px
+					width: 1px
+					height: 100%
+					background: #e5e6e7
+	.footer__ico
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+	.footer__contacts
+		span
+			display: inline-block
+			font-size: 18px
+			vertical-align: middle
+	.footer__nav
+		margin-top: 30px
+		text-align: center
+		font-size: 14px
+	.nav
+		display: inline-block
+		vertical-align: top
+	.nav__link
+		color: #797979
+		text-decoration: none
+		text-transform: uppercase
+	.button
+		display: inline-block
+		font-size: 14px
+		color: #797979
+		border-color: #c8c8c8
+	.footer__copyright
+		color: #A5A5A5
+		font-size: 14px
+	.fb_ico
+		+s(fb)
+		&:hover
+			+s(fb-h)
+	.vk_ico
+		+s(vk)
+		&:hover
+			+s(vk-h)
+	.twitter_ico
+		+s(twitter)
+		&:hover
+			+s(twitter-h)
+	.insta_ico
+		+s(insta)
+		&:hover
+			+s(insta-h)
+	.ok_ico
+		+s(ok)
+		&:hover
+			+s(ok-h)
+	.mail_ico
+		margin: 0 25px
+		+s(mail)
+		&:hover
+			+s(mail-h)
+	.call_ico
+		margin-right: 10px
+		+s(call)

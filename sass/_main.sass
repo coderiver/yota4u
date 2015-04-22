@@ -1,7 +1,11 @@
 //header
 .header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	background: #081319
-	border-bottom: 2px solid #ffffff
+	z-index: 3
 	+clr
 
 .header__in
@@ -27,6 +31,29 @@
 			&:before
 				width: 100%
 				background: #00aeef
+	.open-button
+		display: none
+		position: relative
+		width: 25px
+		height: 16px
+		margin-top: 9px
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		cursor: pointer
+		-webkit-tap-highlight-color: transparent
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			width: 100%
+			height: 2px
+			background: #ffffff
+	+r(800)
+		.header__nav
+			display: none
+		.open-button
+			display: block
 
 .nav
 	margin-top: 6px
@@ -56,7 +83,49 @@
 				width: 100%
 
 
+//header mobile
+.mobile-menu
+	visibility: hidden
+	position: fixed
+	top: 0
+	right: -300px
+	width: 300px
+	height: 100%
+	padding: 0 20px
+	text-align: center
+	-ms-overflow-y: auto
+	overflow-y: auto
+	background: #333E48
+	border-left: 1px solid #ffffff
+	z-index: 4
+	+transition(right 0.3s ease)
+	+box-shadow(inset 2px 2px 1px 0px rgba(#000, 0.5), -5px 0 10px 0px rgba(0, 0, 0, 0.5))
+	+box
+	+clr
+	.nav
+		margin-top: 80px
+	.nav li
+		display: block
+		margin-bottom: 20px
+	.button
+		display: inline-block
+		margin-left: 0
+	.close-button
+		display: block
+		margin-top: 25px
+		+s(close)
+	&.is-active
+		visibility: visible
+		right: 0
+	+r(320)
+		width: 100%
+
+
 //main
+.main
+	padding-top: 64px
+	border-top: 2px solid #ffffff
+
 .slider
 	background: #051014
 
@@ -82,7 +151,7 @@
 		height: 10px
 		background: #FFF
 	+r(1020)
-		max-height: inherit
+		padding-top: 50px
 
 .swiper-wrapper
 	max-width: 1260px
@@ -92,6 +161,8 @@
 	font-size: 0
 	.slide__in
 		max-width: 1260px
+		padding: 0 25px
+		+box
 	.slide__img
 		display: inline-block
 		width: 40%
@@ -148,24 +219,25 @@
 	.slide__location
 		font-size: 0
 		a
-			position: relative
 			display: inline-block
 			margin-right: 35px
-			padding-left: 25px
 			font-size: 16px
 			text-decoration: underline
 			color: #ffffff
-			&:before
-				content: ""
-				position: absolute
-				display: inline-block
-				top: -4px
-				left: 0
-				+transition(all 0.2s ease)
-				+s(location)
-			&:hover
+			span
+				position: relative
+				padding-left: 25px
 				&:before
-					top: -10px
+					content: ""
+					position: absolute
+					display: inline-block
+					top: -4px
+					left: 0
+					+transition(all 0.2s ease)
+					+s(location)
+				&:hover
+					&:before
+						top: -10px
 	+r(1020)
 		.slide__txt,
 		.slide__img
@@ -175,12 +247,34 @@
 			img
 				margin: 0 auto
 		.slide__price
-			margin: 55px auto 15px
+			margin: 50px auto 15px
 		.slide__location
 			text-align: center
 		.slide__ttl
 			font-size: 42px
 			text-align: center
+	+r(630)
+		.slide__img
+			img
+				max-width: 60%
+	+r(500)
+		.slide__ttl
+			font-size: 32px
+		.slide__txt
+			font-size: 15px
+		.slide__price
+			text-align: center
+			margin-bottom: 15px
+			.slide__bl
+				float: none
+			.button
+				display: block
+				margin: 15px auto 0
+		.slide__location
+			padding-bottom: 30px
+		.slide__location a
+			display: block
+			margin: 0 0 15px
 
 
 .cycle-wrap
@@ -363,15 +457,6 @@
 		.description__img,
 		.description__txt
 			width: 50%
-		.description__link
-			&:hover
-				.video_ico
-					&:after
-						+arr(10, 14, #28abe3, r)
-		.video_ico
-			border-color: #ffffff
-			&:before
-				display: none
 	&.is-bright
 		background: url(../img/slide_bg2.jpg)
 		+cover
@@ -411,9 +496,10 @@
 			+transition(all 0.3s ease)
 		&:hover
 			.video_ico
-				border-color: #28abe3
 				&:before
-					+arr(12, 16, #28abe3, r)
+					+opacity(0)
+				&:after
+					+opacity(1)
 	.description__char
 		margin-top: 38px
 		font-size: 0
@@ -430,25 +516,26 @@
 	.video_ico
 		position: relative
 		display: inline-block
-		width: 35px
-		height: 35px
+		width: 34px
+		height: 34px
 		margin-right: 12px
-		border-radius: 50%
-		border: 1px solid #000000
 		vertical-align: middle
-		+transition(all 0.3s ease)
-		&:before,
+		&.is-white
+			&:before
+				+s(player-white)
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			+transition(opacity 0.3s ease)
+			+s(player-dark)
 		&:after
 			content: ""
+			display: block
 			position: absolute
-			top: 50%
-			left: 50%
-			margin: -8px 0 0 -4px
-			+transition(all 0.3s ease)
-			+arr(12, 16, #000000, r)
-		&:after
-			margin: -7px 0 0 -3px
-			+arr(10, 14, #ffffff, r)
+			+opacity(0)
+			+transition(opacity 0.4s ease)
+			+s(player-blue)
 	+r(1260)
 		.description__img
 			img
@@ -743,3 +830,24 @@
 		.footer__copyright
 			float: none
 			text-align: center
+
+//tech
+.tech
+	display: none
+	padding: 70px 0
+	font-size: 0
+	background: #eeeeee
+	.tech__col
+		display: inline-block
+		width: 33.33%
+		vertical-align: top
+	.tech__bl
+		margin-bottom: 18px
+		padding-right: 30px
+		font-size: 16px
+		line-height: 1.5
+		+box
+	.tech__ttl
+		font-size: 18px
+		text-transform: uppercase
+		color: #00aeef

@@ -10,6 +10,18 @@
   <title>main</title>
   <body>
     <div class="out">
+      <div class="mobile-menu">
+        <div class="close-button onright js-close"></div>
+        <nav>
+          <ul class="nav">
+            <li><a href="#" class="nav__link">Магазины</a></li>
+            <li><a href="#" class="nav__link"><span class="txt-bold">Yota</span>Phone 2</a></li>
+            <li><a href="#" class="nav__link">Аксессуары</a></li>
+            <li><a href="#" class="nav__link">Сервис</a></li>
+          </ul>
+          <button type="button" class="button"><span>Купить</span></button>
+        </nav>
+      </div>
       <header class="header">
         <div class="l-center">
           <div class="header__in"><a href="#" class="header__logo onleft"><img src="img/logo.png" alt="yota4you"/></a>
@@ -22,6 +34,7 @@
               </ul>
               <button type="button" class="button onleft"><span>Купить</span></button>
             </nav>
+            <div class="open-button onright js-open"></div>
           </div>
         </div>
       </header>
@@ -37,14 +50,14 @@
                     <p>Первый в мире телефон с двух сторон понравится тем, кто любит читать и не хочет беспокоиться о заряде батареи. Два экрана, один из которых всегда работает. Вся вселенная андроидных приложений на обоих.</p>
                     <div class="slide__price">
                       <p>Цена</p>
-                      <div class="onleft">
+                      <div class="slide__bl onleft">
                         <p class="txt-large">39 990 <span class="price__currency">Р</span></p>
                       </div>
-                      <div class="onright">
-                        <button type="button" class="button onleft"><span>Купить</span></button>
+                      <div class="slide__bl onright">
+                        <button type="button" class="button"><span>Купить</span></button>
                       </div>
                     </div>
-                    <div class="slide__location"><a href="#">Магазины</a><a href="#">Сервисные центры</a></div>
+                    <div class="slide__location"><a href="#"><span>Магазины</span></a><a href="#"><span>Сервисные центры</span></a></div>
                   </div>
                 </div>
               </div>
@@ -60,7 +73,7 @@
                         <p class="txt-large">39 990 <span class="price__currency">Р</span></p>
                       </div>
                       <div class="onright">
-                        <button type="button" class="button onleft"><span>Купить</span></button>
+                        <button type="button" class="button"><span>Купить</span></button>
                       </div>
                     </div>
                     <div class="slide__location"><a href="#">Магазины</a><a href="#">Сервисные центры</a></div>
@@ -242,7 +255,7 @@
           <div class="l-inner">
             <div class="description__img onleft"><img src="img/section2.png" alt="yotaphone"/></div>
             <div class="description__txt onleft">
-              <h2 class="description__ttl txt-light">Работает по дням,<br> а не по часам</h2><a href="#" class="description__link txt-light"><i class="video_ico"></i><span>Смотреть видео</span></a>
+              <h2 class="description__ttl txt-light">Работает по дням,<br> а не по часам</h2><a href="#" class="description__link txt-light"><i class="video_ico is-white"></i><span>Смотреть видео</span></a>
               <p>
                 Два дня работы в режиме YotaEnergy, который экономит батарейку и сохраняет основные функции телефона.
                 Если батарея всё-таки садится, сохраните карту или авиабилет в YotaSnap, и информация останется на втором экране даже после полного разряда батереи.
@@ -286,7 +299,7 @@
           <div class="l-inner">
             <div class="description__img onleft"><img src="img/section4.png" alt="yotaphone" class="pad-5"/></div>
             <div class="description__txt onleft">
-              <h2 class="description__ttl txt-light">Носит личный<br> характер</h2><a href="#" class="description__link txt-light"><i class="video_ico"></i><span>Смотреть видео</span></a>
+              <h2 class="description__ttl txt-light">Носит личный<br> характер</h2><a href="#" class="description__link txt-light"><i class="video_ico is-white"></i><span>Смотреть видео</span></a>
               <p>
                 Не просто фоновая картинка, обложка!
                 Поставьте любое изображение или настройте слайдшоу из Инстаграма. Творите и делитесь своим настроением с окружающими!
@@ -337,6 +350,158 @@
                 </div>
               </div>
             </div><a href="#" class="service__link js-click">Технические характеристики <i class="arr_ico"></i></a>
+          </div>
+        </section>
+        <section class="tech">
+          <div class="l-inner">
+            <div class="tech__col">
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Операционная система</h3>
+                <p>
+                  Android™ 4.4, KitKat®,
+                  Автоматическое обновление до версии Android™ 5, Lollipop®
+                </p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Процессор</h3>
+                <p>Qualcomm® Snapdragon™ 801 2.2 GHz quad-core</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Тип корпуса</h3>
+                <p>Моноблок с двумя сенсорными экранами</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Размеры</h3>
+                <p>144.9 x 69.4 x 8.95 мм</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Время работы</h3>
+                <p class="txt-semibold">В режиме ожидания:</p>
+                <p>
+                  с 2G: до 16.5 дней (397 часов)
+                  с 3G: до 17 дней (406 часов)
+                  с LTE: до 16 дней (387 часов)
+                </p>
+                <p class="txt-semibold">В режиме разговора:</p>
+                <p>
+                  аудио звонок, 2G: до 41.8 часов
+                  аудио звонок, 3G: до 26.0 часов
+                  аудио звонок по Skype, LTE: до 13.7 часов
+                  видео звонок по Skype, LTE: до 1.8 часов
+                </p>
+                <p class="txt-semibold">Чтение с Yota Reader (3G):</p>
+                <p>до 109.3 часов</p>
+                <p class="txt-semibold">Потоковое воспроизведение видео:</p>
+                <p>
+                  LTE: до 5.5 часов
+                  Wi-Fi: до 5.8 часов
+                </p>
+                <p class="txt-semibold">В режиме воспроизведения видео:</p>
+                <p>до 9.5 часов</p>
+                <p class="txt-semibold">В режиме воспроизведения аудио:</p>
+                <p>
+                  LTE: до 5.4 часов
+                  3G: до 17.8 часов
+                </p>
+                <p class="txt-semibold">Прослушивание аудио:</p>
+                <p>
+                  с гарнитурой: до 92.0 часов
+                  через динамик: до 62.4 часов
+                </p>
+                <p class="txt-semibold">Просмотр web-страниц:</p>
+                <p>
+                  LTE: до 4.5 часов
+                  Wi-Fi: до 4.4 часов
+                </p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Вес</h3>
+                <p>145 г.</p>
+              </div>
+            </div>
+            <div class="tech__col">
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Аудио</h3>
+                <p>3.5mm AV выход, FM радио</p>
+                <p class="txt-semibold">Форматы аудио/кодеки:</p>
+                <p>AAC LC, HE-AACv1 (AAC+), HE-AACv2 (enhanced AAC+), AAC ELD, AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.</p>
+                <p class="txt-semibold">Типы файлов/контейнеры:</p>
+                <p>3GPP (.3gp), MPEG-4 (.mp4, .m4a), ADTS raw AAC (.aac), MPEG-TS (.ts), 3GPP (.3gp), FLAC (.flac), MP3 (.mp3), MIDI Type 0 and 1 (.mid, .xmf, .mxmf), RTTTL/RTX (.rtttl, .rtx), OTA (.ota), iMelody (.imy), Ogg (.ogg), Matroska (.mka), WAVE (.wav)</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Видео</h3>
+                <p><span class="txt-semibold">Разрешение: </span>Full HD 1080p</p>
+                <p><span class="txt-semibold">Частота кадров: </span>30fps</p>
+                <p><span class="txt-semibold">Видео кодеки: </span>H.263, H.264 AVC, MPEG-4, WebM</p>
+                <p><span class="txt-semibold">Типы файлов/контейнеры: </span>3GPP (.3gp), MPEG-4 (.mp4), MPEG-TS (.ts), WebM (.webm), Matroska (.mkv)</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Связь</h3>
+                <p>
+                  GSM/EGPRS 850, 900, 1800, 1900 MHz
+                  WCDMA, DC HSDPA (rel. 8, cat. 24)
+                  HSUPA (rel. 7, cat 7) bands 1 (diversity), 2, 5 and 8
+                  LTE (rel. 9, cat 4) bands 3, 7 and 20, VoLTE
+                </p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Память</h3>
+                <p>2GB RAM, 32GB eMMC</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Датчики</h3>
+                <p>Акселерометр, компас, гироскоп, датчик приближения, датчик освещения</p>
+              </div>
+            </div>
+            <div class="tech__col">
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Камера</h3>
+                <p><span class="txt-semibold">Основная: </span>8 Мп, автофокус, светодиодная вспышка</p>
+                <p><span class="txt-semibold">Фронтальная: </span>2,1 Мп</p>
+                <p><span class="txt-semibold">Видео кодеки: </span>H.263, H.264 AVC, MPEG-4, WebM</p>
+                <p><span class="txt-semibold">Типы файлов/контейнеры: </span>3GPP (.3gp), MPEG-4 (.mp4), MPEG-TS (.ts), WebM (.webm), Matroska (.mkv)</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Цветной дисплей</h3>
+                <p><span class="txt-semibold">Технология: </span>AMOLED</p>
+                <p><span class="txt-semibold">Размеры: </span>5.0"</p>
+                <p><span class="txt-semibold">Разрешение: </span>Full HD 1920 x 1080</p>
+                <p><span class="txt-semibold">Цвета: </span>16M</p>
+                <p><span class="txt-semibold">Соотношение сторон экрана: </span>16:9</p>
+                <p><span class="txt-semibold">Разрешающая способность: </span>442 ppi</p>
+                <p><span class="txt-semibold">Разрешение: </span>Full HD 1920 x 1080</p>
+                <p><span class="txt-semibold">Ввод: </span>емкостный тачскрин Corning Gorilla Glass 3</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Всегда включенный дисплей</h3>
+                <p><span class="txt-semibold">Технология: </span>дисплей на электронных чернилах</p>
+                <p><span class="txt-semibold">Размер: </span>4.7"</p>
+                <p><span class="txt-semibold">Разрешение: </span>960 x 540</p>
+                <p><span class="txt-semibold">Цвета: </span>16 градаций серого</p>
+                <p><span class="txt-semibold">Соотношение сторон экрана: </span>16:9</p>
+                <p><span class="txt-semibold">Разрешающая способность: </span>235 ppi</p>
+                <p><span class="txt-semibold">Ввод: </span>емкостный тачскрин Corning Gorilla Glass 3</p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Интерфейсы</h3>
+                <p>
+                  WiFi 802.11 a/b/g/n/ac (VHT20, MSC 8)
+                  MicroUSB 2.0 (SlimPort®)
+                  Bluetooth® 4.0
+                  NFC
+                  A-GPS + GLONASS
+                  Nano-SIM
+                </p>
+              </div>
+              <div class="tech__bl">
+                <h3 class="tech__ttl">Аккумулятор</h3>
+                <p>
+                  2500mAh lithium-polymer
+                  Qualcomm® Quick Charge™ 2.0
+                  Беспроводная зарядка (Qi стандарт)
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <section class="buy">

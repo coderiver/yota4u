@@ -13,7 +13,7 @@ head.ready(function() {
 
 	function sliderHeight(){
 
-		var slideHeight = $('.swiper-container .slide__in').height();
+		var slideHeight = $('.slider .swiper-container .slide__in').height();
 		var wrapper = $('.slider .swiper-wrapper');
 		var slideWrap = $('.slider .swiper-slide');
 
@@ -26,6 +26,27 @@ head.ready(function() {
 
 	$(window).resize(function(){
 		sliderHeight();
+		if($(window).width() > 800){
+			$('.mobile-menu').removeClass('is-active');
+		}
 	})
+
+
+	//mobile menu
+	$('.js-open').click(function(){
+		$('.mobile-menu').addClass('is-active');
+		$('body').addClass('is-hidden');
+	});
+
+	$('.js-close').click(function(){
+		$('.mobile-menu').removeClass('is-active');
+		$('body').removeClass('is-hidden');
+	});
+
+	$('.js-click').click(function(i){
+		i.preventDefault();
+		$(this).find('.arr_ico').toggleClass('is-active');
+		$('.tech').slideToggle();
+	});
 
 });

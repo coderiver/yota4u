@@ -1,6 +1,7 @@
 head.ready(function() {
 
-  var swiper = $('.swiper-container').swiper({
+	//main slider
+	var swiper = $('.swiper-container').swiper({
 		speed: 800,
 		loop: true,
 		keyboardControl: true,
@@ -24,6 +25,7 @@ head.ready(function() {
 
 	sliderHeight();
 
+	//on resize
 	$(window).resize(function(){
 		sliderHeight();
 		if($(window).width() > 800){
@@ -43,6 +45,7 @@ head.ready(function() {
 		$('body').removeClass('is-hidden');
 	});
 
+	//technichal details
 	$('.js-click').click(function(i){
 		i.preventDefault();
 		$(this).find('.arr_ico').toggleClass('is-active');

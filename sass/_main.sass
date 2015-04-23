@@ -64,7 +64,8 @@
 		vertical-align: middle
 	.nav__link
 		position: relative
-		display: inline-block
+		display: block
+		//display: inline-block
 		margin: 0 15px
 		font-size: 14px
 		text-decoration: none
@@ -104,7 +105,7 @@
 	+box-shadow(inset 2px 2px 1px 0px rgba(#000, 0.5), -5px 0 10px 0px rgba(0, 0, 0, 0.5))
 	+box
 	+clr
-	+translate3d
+	+gpu
 	.nav
 		padding-top: 80px
 	.nav li
@@ -132,19 +133,19 @@
 	+box
 
 .slider
-	padding: 100px 0 80px
+	padding: 100px 0 30px
 	background: url(../img/slide_bg.jpg) center center
 	background-color: #051014
 	+cover
 	+box
-
-.swiper-container
+	.swiper-container
+		padding-bottom: 50px
 	.swiper-button-prev
 		+s(prev)
 	.swiper-button-next
 		+s(next)
 	.swiper-pagination
-		bottom: 20px
+		bottom: 0
 	.swiper-pagination-bullet
 		width: 5px
 		height: 5px
@@ -155,15 +156,11 @@
 		width: 10px
 		height: 10px
 		background: #FFF
-	+r(1020)
-		padding-top: 50px
-
-.swiper-wrapper
-	max-width: 1260px
-	margin: 0 auto
-
-.swiper-slide
-	font-size: 0
+	.swiper-wrapper
+		max-width: 1260px
+		margin: 0 auto
+	.swiper-slide
+		font-size: 0
 	.slide__in
 		max-width: 1260px
 		padding: 0 25px
@@ -244,6 +241,7 @@
 					&:before
 						top: -10px
 	+r(1020)
+		padding-top: 50px
 		.slide__txt,
 		.slide__img
 			display: block
@@ -281,68 +279,48 @@
 			display: block
 			margin: 0 0 15px
 
-.quotes
-	.cycle-wrap
-		position: relative
-		min-height: 540px
-		padding: 0 25px
-		+box
-		.cycle-slideshow
-			z-index: 1
-			overflow: hidden //TODO AUTOHEIGHT
-			+clr
-		.slide,
-		.slide-quote
-			display: none
-			&:first-child
-				display: block
-		.cycle-prev,
-		.cycle-next
-			position: absolute
-			top: 50%
-			margin-top: -26px
-			cursor: pointer
-			z-index: 2
-		.cycle-prev
-			left: 0
-			+s(prev)
-			&.is-blue
-				+s(prev-blue)
-		.cycle-next
-			right: 0
-			+s(next)
-			&.is-blue
-				+s(next-blue)
-		.cycle-pager
-			position: absolute
-			left: 50%
-			bottom: -60px
-			font-size: 0
-			+transform(translateX(-50%)) //TODO another way of centering
-			span
-				display: inline-block
-				width: 7px
-				height: 7px
-				margin: 0 10px
-				border-radius: 50%
-				border: 1px solid #ffffff
-				vertical-align: middle
-				cursor: pointer
-			.cycle-pager-active
-				width: 10px
-				height: 10px
-				background: #ffffff
-
 
 //quotes
 .quotes
-	padding: 50px 0 20px
+	padding: 50px 0
 	&.with-bg
 		background: #eeeeee
+	.button-prev,
+	.button-next
+		position: absolute
+		top: 50%
+		margin-top: -26px
+		cursor: pointer
+		z-index: 3
+	.button-prev
+		left: 0
+		+s(prev-blue)
+	.button-next
+		right: 0
+		+s(next-blue)
+	.pagination
+		display: none
+		position: absolute
+		width: 100%
+		bottom: 0
+		text-align: center
+		margin-top: 10px
+		span
+			width: 10px
+			height: 10px
+			margin: 0 5px
+		.swiper-pagination-bullet-active
+			background: #00aeef
+	+r(800)
+		.button-prev,
+		.button-next
+			display: none
+		.pagination
+			display: block
+
 
 .quotes-wrap
-	margin-bottom: 60px
-	padding: 0 100px
+	padding: 0 100px 60px
 	+box
 	+clr
 	.quotes__in
@@ -397,8 +375,7 @@
 			left: -23px
 			+s(quote)
 	+r(1020)
-		margin-bottom: 40px
-		padding: 0 5%
+		padding: 0 10% 40px
 		.quotes__in
 			width: 100%
 			margin-bottom: 20px
@@ -423,6 +400,10 @@
 			margin-bottom: 30px
 			&:last-child
 				margin-bottom: 0
+	+r(500)
+		.quotes__in.main-quote
+			.blockquote
+				font-size: 21px
 
 .slide-quote
 	.quotes__bl
@@ -435,12 +416,32 @@
 //video
 .video
 	background: #000000
+	+r(500)
+		.l-center
+			padding: 0
 
 .video-wrap
 	width: 100%
 	position: relative
 	padding-bottom: 45%
 	height: 0
+	.video_ico
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -56.5px 0 0 -57px
+		z-index: 6
+		+s(icon-play)
+	.video__bg
+		background: url(../img/bg_video.jpg)
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 5
+		+cover
 	iframe
 		position: absolute
 		top: 0
